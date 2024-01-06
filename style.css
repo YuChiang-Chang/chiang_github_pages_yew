@@ -52,6 +52,8 @@ body a{
 #nav a{
     /* color: white; */
     color: var(--fontColor);
+    display: block;
+    /* text-decoration: none; */
 }
 
 .nav-btn{

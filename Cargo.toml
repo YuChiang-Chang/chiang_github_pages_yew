@@ -1,5 +1,5 @@
 [package]
-name = "Github_Pages_Yew"
+name = "Github_Pages__Yew"
 version = "0.1.0"
 edition = "2021"
 
@@ -7,3 +7,4 @@ edition = "2021"
 
 [dependencies]
 yew = { git = "https://github.com/yewstack/yew/", features = ["csr"] }
+stylist = "0.13"

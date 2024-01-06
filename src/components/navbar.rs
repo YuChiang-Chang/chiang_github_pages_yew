@@ -1,9 +1,10 @@
 use yew::prelude::*;
+// use stylist::yew::styled_component;
 
 #[function_component(Navbar)]
 pub fn navbar() -> Html {
     html! {
-        <nav id="nav">
+        <nav class="nav">
             <ul>
                 <li>
                     <a id="aboutme-btn" href="#about" class="nav-btn">

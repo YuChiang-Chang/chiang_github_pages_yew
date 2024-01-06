@@ -8,7 +8,7 @@ use components::*;
 fn app() -> Html {
     html! {
         <body class="dark-mode">
-            // <div id="container">
+            <div id="container">
             <navbar::Navbar />
                 // <div id="nav">
                 //     //  <span id="open-right-navbtn" class="nav-btn" style="cursor: pointer;" href="#about">
@@ -210,7 +210,7 @@ fn app() -> Html {
             //         </div>
             //         <img id="modalImg">
             //     </div>
-            // </div>
+            </div>
         </body>
     }
 }
