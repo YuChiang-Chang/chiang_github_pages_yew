@@ -1,14 +1,17 @@
 use yew::prelude::*;
 
+mod ui;
 mod components;
+mod modules;
+mod pages;
 
 use components::*;
 
 #[function_component(App)]
 fn app() -> Html {
     html! {
-        <body class="dark-mode">
-            <div id="container">
+        <div>
+            // <div id="container">
             <navbar::Navbar />
                 // <div id="nav">
                 //     //  <span id="open-right-navbtn" class="nav-btn" style="cursor: pointer;" href="#about">
@@ -28,7 +31,7 @@ fn app() -> Html {
                 //     </a>
                 //     // <style>"style.css"</style>
                 // </div>
-
+            <profile::Profile />
             //     <div id="about" class="right-sidenav">
             //         <!-- <span style="cursor: pointer;">&Cross;</span> -->
             //         <a href="javascript:void(0)" id="close-about-btn">&Cross;</a>
@@ -48,7 +51,7 @@ fn app() -> Html {
             //             <a href="mailto:yuchiang.chang.taiwan@gmail.com">yuchiang.chang.taiwan@gmail.com</a>
             //         </div>
             //     </div>
-
+            <content::Content />
             //     <div id="content">
             //         <h1 style="text-align: center;">作品集</h1>
             //         <div id="game">
@@ -67,10 +70,10 @@ fn app() -> Html {
             //                     <div class="work-content">
             //                         <h3>Unity Visual Effect Graph測試</h3>
             //                         <p>
-            //                             使用Visual Effect Graph製作粒子特效。
-            //                             <br>
-            //                             <br>
-            //                             製作工具：Unity
+                                        // 使用Visual Effect Graph製作粒子特效。
+                                        // <br>
+                                        // <br>
+                                        // 製作工具：Unity
             //                         </p>
             //                     </div>
             //                 </div>
@@ -210,8 +213,8 @@ fn app() -> Html {
             //         </div>
             //         <img id="modalImg">
             //     </div>
-            </div>
-        </body>
+            // </div>
+        </div>
     }
 }
 

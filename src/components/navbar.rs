@@ -1,10 +1,9 @@
 use yew::prelude::*;
-// use stylist::yew::styled_component;
 
 #[function_component(Navbar)]
 pub fn navbar() -> Html {
     html! {
-        <nav class="nav">
+        <nav id="nav">
             <ul>
                 <li>
                     <a id="aboutme-btn" href="#about" class="nav-btn">
@@ -26,10 +25,7 @@ pub fn navbar() -> Html {
                         {"網頁作品"}
                     </a>
                 </li>
-                // <li>
-                // </li>
             </ul>
-            // <style>"style.css"</style>
         </nav>
     }
 }
