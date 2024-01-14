@@ -53,11 +53,13 @@ pub fn work() -> Html {
 }
 #[function_component(Work2)]
 pub fn work() -> Html {
+    let video = format!("<video src='./static/videos/UE5_Demo001 3s-1080p.webm' controls autoplay loop></video>");
+
     html! {
         <article class="work">
             <h3>{"Unreal Engine 5佈景測試"}</h3>
-            // <video src="./static/videos/UE5_Demo001 3s-1080p.webm" controls autoplay loop></video>
-            <video src="./static/videos/UE5_Demo001 3s-1080p.webm"></video>
+            {Html::from_html_unchecked(AttrValue::from(video))}
+            // <video src="./static/videos/UE5_Demo001 3s-1080p.webm"></video>
             <p>
                 {"摸索Unreal Engine 5，並使用Quixel Bridge資源在Unreal Engine內隨意佈景。"}
             </p>
