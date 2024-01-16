@@ -94,7 +94,7 @@ pub fn work() -> Html {
     html! {
         <article class="work">
             <h3>{"John Lemon's Haunted Jaunt 教學專案作品"}</h3>
-            <img src="./static/images/John Lemon's Haunted Jaunt.png" alt="John Lemon's Haunted Jaunt 教學專案作品" class="work-img" />
+            <img src="./static/images/John Lemon's Haunted Jaunt.png" alt="John Lemon's Haunted Jaunt 教學專案作品" />
             <p>
                 {"在此教學中，學習到了如何編寫操控角色，環境的燈光調整，與使用Cinemachine來使相機追蹤角色，並使用Post-Processing幫鏡頭加上特效。
                 也學習放置靜態與動態的敵人與其導航網格(AI)功能，來控制動態敵人的移動。"}
@@ -112,7 +112,7 @@ pub fn work() -> Html {
     html! {
         <article class="work">
             <h3>{"Survival Shooter 教學專案作品"}</h3>
-            <img src="./static/images/Survival Shooter.png" alt="Survival Shooter 教學專案作品" class="work-img" />
+            <img src="./static/images/Survival Shooter.png" alt="Survival Shooter 教學專案作品" />
             <p>
                 {"在此教學中，學習到了如何製作UI，利用相機投射到網格並將值傳到角色身上使角色旋轉，並編寫生命值與傷害等功能，並在遊戲中生成敵人與用Audio Mixer調整音效。"}
             </p>
@@ -176,7 +176,25 @@ pub fn work() -> Html {
                 <a href="https://github.com/YuChiang-Chang/user_github_pages_yew">{"https://github.com/YuChiang-Chang/user_github_pages_yew"}</a><br/>
                 <br/>
                 {"2024/01/07 開始製作"}<br/>
-                {"2024/01/14 發佈到Github Pages測試"}
+                {"2024/01/14 發佈到Github Pages測試 (yuchiang-chang.github.io)"}
+            </p>
+        </article>
+    }
+}
+#[function_component(Work10)]
+pub fn work() -> Html {
+    html! {
+        <article class="work">
+            <h3>{"畢業專題"}</h3>
+            <img src="./static/images/fornt-light.png" alt="畢業專題" />
+            <p>
+                {"以掃地機器人為探討基礎，
+                導入深度學習與影像辨識，
+                將樹莓派加裝鏡頭，
+                使樹莓派可透過鏡頭進行影像辨識，
+                並透過加入深度學習使樹莓派可進行物體識別。"}<br/>
+                <br/>
+                {"使用工具與技術：python、樹莓派、OpenCV、Caffe、CNN"}
             </p>
         </article>
     }

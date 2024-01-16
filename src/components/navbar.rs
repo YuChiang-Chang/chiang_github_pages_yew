@@ -25,6 +25,11 @@ pub fn navbar() -> Html {
                         {"網頁作品"}
                     </a>
                 </li>
+                <li>
+                    <a href="#others" class="nav-btn">
+                        {"其他"}
+                    </a>
+                </li>
             </ul>
         </nav>
     }
