@@ -30,6 +30,7 @@ pub fn content() -> Html {
             <section id="web" class="portfolio">
                 <work::Work8 />
                 <work::Work9 />
+                <work::Work11 />
             </section>
             <h2>{"其他"}</h2>
             <hr class="h1-hr" />

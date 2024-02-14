@@ -19,8 +19,7 @@ pub fn work(props: &Props) -> Html {
             <h3>{props.h3.clone()}</h3>
             <p>
                 {props.p_content.clone()}
-            </p>
-            <br/>
+            </p><br/>
             <br/>
             <p>
                 {props.p_tool.clone()}
@@ -195,6 +194,31 @@ pub fn work() -> Html {
                 並透過加入深度學習使樹莓派可進行物體識別。"}<br/>
                 <br/>
                 {"使用工具與技術：python、樹莓派、OpenCV、Caffe、CNN"}
+            </p>
+        </article>
+    }
+}
+
+#[function_component(Work11)]
+pub fn work() -> Html {
+    html! {
+        <article class="work">
+            <h3>{"待辦事項管理應用"}</h3>
+            <img src="./static/images/螢幕擷取畫面_11-2-2024_193947_localhost.jpeg" alt="待辦事項管理應用" />
+            <p>
+                {"
+                一個簡單的待辦事項管理應用，
+                使用React前端框架和Node.js後端實現。
+                允許用戶新增、檢視、刪除待辦事項。
+                "}<br/>
+                <br/>
+                {"技術堆疊：前端：React、
+                後端：Node.js, Express、
+                資料庫：MongoDB"}<br/>
+                <br/>
+                <a href="https://github.com/YuChiang-Chang/todo-api">
+                {"https://github.com/YuChiang-Chang/todo-api"}
+                </a><br/>
             </p>
         </article>
     }
