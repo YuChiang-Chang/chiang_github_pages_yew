@@ -1,19 +1,31 @@
 use yew::prelude::*;
 
+#[derive(Properties, PartialEq, Clone, Default)]
+pub struct ImageInfo {
+    pub src: String,
+    #[prop_or_default]
+    pub alt: String,
+}
+
 #[derive(Properties, PartialEq)]
 pub struct Props {
     #[prop_or_default]
-    pub images: Vec<(String, String)>,
+    pub feature_image: ImageInfo,
+    #[prop_or_default]
+    // pub images: Vec<(String, String)>,
+    pub item_images: Vec<ImageInfo>,
 }
 
 #[function_component(Gallery)]
 pub fn gallery(props: &Props) -> Html {
     html! {
         <div class="gallery">
-            { for props.images.iter().map(|(img_src, alt)| {
+            <img class="gallery__feature" src={props.feature_image.src.clone()} alt={props.feature_image.alt.clone()} />
+            // { for props.images.iter().map(|(img_src, alt)| {
+            { for props.item_images.iter().map(|image| {
                 html! {
                     <div class="gallery__item">
-                        <img src={img_src.clone()} alt={alt.clone()} />
+                        <img src={image.src.clone()} alt={image.alt.clone()} />
                     </div>
                 }
             }) }

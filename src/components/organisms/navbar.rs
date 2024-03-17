@@ -11,6 +11,11 @@ pub fn navbar() -> Html {
                     </a> 
                 </li>
                 <li>
+                    <a href="#web" class="nav-btn">
+                        {"網頁作品"}
+                    </a>
+                </li>
+                <li>
                     <a href="#game" class="nav-btn">
                         {"遊戲作品"}
                     </a>
@@ -18,11 +23,6 @@ pub fn navbar() -> Html {
                 <li>
                     <a href="#model" class="nav-btn">
                         {"模型作品"}
-                    </a>
-                </li>
-                <li>
-                    <a href="#web" class="nav-btn">
-                        {"網頁作品"}
                     </a>
                 </li>
                 <li>
