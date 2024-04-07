@@ -1,4 +1,4 @@
-.profile {
+#profile {
     transition: 0.5s;
     height: 100vh;
     position: fixed;
@@ -32,4 +32,27 @@
       // font-size: 2rem;
       // box-sizing: border-box;
     }
-  }
+
+    @media screen and (max-width: 1024px) {
+      // .profile {
+        // flex: auto;
+        position: static;
+        // display:  flex;
+        height: auto;
+        padding-top: 3rem;
+        margin: 0;
+        top: auto;
+        left: 0;
+        right: 0;
+        width: 100%;
+        box-shadow: none;
+        justify-content: center;
+        // flex-direction: column;
+        // flex-wrap: wrap;
+        
+        #profile-close-button {
+          display: none;
+        }
+      // }
+    }
+}

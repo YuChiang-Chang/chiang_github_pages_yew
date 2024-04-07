@@ -6,7 +6,7 @@ pub fn navbar() -> Html {
         <nav id="nav">
             <ul>
                 <li>
-                    <a id="aboutme-btn" href="#about" class="nav-btn">
+                    <a id="aboutme-btn" href="#profile" class="nav-btn">
                         {"關於我"}
                     </a> 
                 </li>

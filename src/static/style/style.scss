@@ -28,7 +28,7 @@
     }
   }
 
-  .profile {
+  #profile {
     background-color: #222222;
     // background-color: rgb(34, 34, 34);
 
@@ -59,9 +59,6 @@ body {
   // display: flex;
   // -webkit-flex-flow: row wrap;
   // flex-flow: row wrap;
-}
-
-#container {
 }
 
 // nav {
@@ -456,7 +453,7 @@ main {
     }
 
     a {
-      display: flex;
+      // display: flex;
     }
 
     .nav-btn {
@@ -476,27 +473,6 @@ main {
     }
   }
   
-  .profile {
-    // flex: auto;
-    position: static;
-    display: flex;
-    height: auto;
-    padding-top: 3rem;
-    margin: 0;
-    top: auto;
-    left: 0;
-    right: 0;
-    width: 100%;
-    box-shadow: none;
-    // flex-direction: column;
-    // flex-wrap: wrap;
-    
-    #profile-close-button {
-      display: none;
-    }
-  }
-  
-  
   #content {
     margin: 0;
     width: 100vw;
@@ -510,7 +486,7 @@ main {
   }
 }
 
-@media screen and (max-width: 725px) {
+@media screen and (max-width: 767px) {
   .work img {
     max-width: 100%;
   }

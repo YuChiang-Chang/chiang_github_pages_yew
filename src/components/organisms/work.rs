@@ -40,8 +40,31 @@ pub struct Props {
 
 #[function_component(Work)]
 pub fn work(props: &Props) -> Html {
+    let is_modal_open = use_state(|| false);
+    let modal_content = use_state(|| html! {});
+
+    let open_modal = {
+        let is_modal_open = is_modal_open.clone();
+        let modal_content = modal_content.clone();
+        move |content: Html| {
+            modal_content.set(content);
+            is_modal_open.set(true);
+        }
+    };
+
     let media_content = match &props.media {
-        Some(MediaType::Image {src, alt }) => html! { <img src={src.clone()} alt={alt.clone()} loading="lazy"/> },
+        // Some(MediaType::Image {src, alt }) => html! { <img src={src.clone()} alt={alt.clone()} loading="lazy"/> },
+        Some(MediaType::Image { src, alt }) => {
+            let onclick = {
+                let open_modal = open_modal.clone();
+                let src = src.clone();
+                let alt = alt.clone();
+                Callback::from(move |_| {
+                    open_modal(html! { <img src={src.clone()} alt={alt.clone()} loading="lazy"/> });
+                })
+            };
+            html!{ <img src={src.clone()} alt={alt.clone()} loading="lazy" onclick={onclick}/> }
+        },
         Some(MediaType::Video(src)) => html! { <video src={src.clone()} controls=true autoplay=true loop=true /> },
         // Some(MediaType::Video{ src, attr}) => { 
         //     let video_attrs = if let Some(attr_value) = attr {
@@ -55,6 +78,7 @@ pub fn work(props: &Props) -> Html {
         None => html! {},
     };
     html! {
+        <>
         <article class="work">
             <h3>{props.title.clone()}</h3>
             <div class="media work__media">
@@ -70,6 +94,17 @@ pub fn work(props: &Props) -> Html {
             // </p>
             <a href={props.link_url.clone()}>{props.link_text.clone()}</a>
         </article>
+        // if *is_modal_open {
+        //     html! {
+        //         <div class="modal" onclick={...}>
+        //             <div class="modal-content">
+        //                 {*modal_content}
+        //                 <button onclick={...}>"Close"</button>
+        //             </div>
+        //         </div>
+        //     }
+        // }
+        </>
     }
 }
 
