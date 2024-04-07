@@ -51,12 +51,20 @@ pub fn home_page() -> Html {
                 </Work>
                 <work::Work
                     title="使用Rust改寫作品集網站"
+                    media={Some(work::MediaType::Image {
+                        src: "./static/images/螢幕擷取畫面_8-4-2024_6389_yuchiang-chang.github.io.jpeg".to_string(),
+                        alt: "Yew作品集網站".to_string(),
+                    })}
                     content="使用Rust語言與Yew框架重新編寫本作品集網站\n\n技術堆疊：Rust、Yew、Html、SCSS、GitHub Pages"
-                    link_url="https://github.com/YuChiang-Chang/chiang_github_pages_yew"
-                    link_text="https://github.com/YuChiang-Chang/chiang_github_pages_yew"
+                    // link_url="https://github.com/YuChiang-Chang/chiang_github_pages_yew"
+                    // link_text="https://github.com/YuChiang-Chang/chiang_github_pages_yew"
                 />
                 <work::Work
                     title="作品集網站"
+                    media={Some(work::MediaType::Image {
+                        src: "./static/images/螢幕擷取畫面_8-4-2024_6486_yuchiang-chang.github.io.jpeg".to_string(),
+                        alt: "Yew作品集網站".to_string(),
+                    })}
                     // content="此作品集網站就是我的作品之一，因為想學會如何撰寫網頁，所以就寫了自己的作品集RWD網站。\n自主學習html、css、javascript等\n並且使用webpack進行打包，與使用GitHub Pages發布。\n\n使用工具：JavaScript、Webpack、Html、CSS、GitHub、VS Code"
                 >
                     <p>
